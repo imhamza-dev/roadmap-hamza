@@ -3,45 +3,108 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tailwind CSS Component</title>
-		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Real-Time Database-Form</title>
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Arial, sans-serif;
+				background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+			.form-container {
+				background-color: #fff;
+				padding: 30px;
+				border-radius: 10px;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+				width: 350px;
+				transition: transform 0.3s ease;
+			}
+			.form-container:hover {
+				transform: translateY(-5px);
+			}
+			.form-group {
+				margin-bottom: 20px;
+			}
+			.form-group label {
+				display: block;
+				margin-bottom: 8px;
+				font-weight: bold;
+				color: #333;
+			}
+			.form-group input[type='text'],
+			.form-group textarea {
+				width: 80%;
+				padding: 12px 15px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				font-size: 14px;
+				background-color: #f9f9f9;
+				transition: border-color 0.3s ease;
+			}
+			.form-group input[type='text']:focus,
+			.form-group textarea:focus {
+				border-color: #007bff;
+				outline: none;
+			}
+			.form-group textarea {
+				resize: vertical;
+			}
+			.form-group input[type='submit'] {
+				width: 100%;
+				padding: 12px;
+				background-color: #007bff;
+				border: none;
+				border-radius: 5px;
+				color: #fff;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			.form-group input[type='submit']:hover {
+				background-color: #0056b3;
+			}
+		</style>
 	</head>
-	<body class="bg-gray-100 p-4">
-		<div class="bg-white p-4 rounded-lg shadow-md w-full max-w-sm">
-			<div class="flex items-center justify-between mb-2">
-				<span
-					class="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
-					>In Progress</span
-				>
-				<span class="text-gray-400">+509</span>
-			</div>
-			<h2 class="text-lg font-semibold text-gray-900 mb-2">
-				Multiple field sorting
-			</h2>
-			<p class="text-gray-500 mb-4">
-				Allow for sorting to be done over multiple fields on a table.
-			</p>
-			<div class="flex items-center">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5 text-gray-400 mr-2"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M5 13l4 4L19 7"
+	<body>
+		<div class="form-container">
+			<form id="statusForm">
+				<div class="form-group">
+					<label for="status">Status</label>
+					<input
+						type="text"
+						id="status"
+						class="input-field"
+						placeholder="Enter status"
 					/>
-				</svg>
-				<span class="text-gray-400">Target Release:</span>
-				<span
-					class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-					>June 2024</span
-				>
-			</div>
+				</div>
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input
+						type="text"
+						id="title"
+						class="input-field"
+						placeholder="Enter title"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<textarea
+						id="description"
+						class="input-field"
+						placeholder="Enter description"
+						rows="4"
+					></textarea>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Submit" />
+				</div>
+			</form>
 		</div>
+
+		<script></script>
 	</body>
 </html>
