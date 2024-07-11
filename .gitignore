@@ -27,3 +27,8 @@ dist-ssr
 .history
 
 package-lock.json
+yarn.lock
+
+counter.js
+
+.node_modules
