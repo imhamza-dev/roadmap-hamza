@@ -16,17 +16,43 @@
 				background-color: #0e52e6;
 				margin: 0 1rem;
 			}
+			.nav-link {
+				border-bottom: 2px solid transparent;
+				transition: color 0.3s, border-bottom 0.3s;
+				padding: 10px;
+			}
+			.nav-link:hover {
+				background-color: #e8e9eb;
+				padding: 10px;
+				overflow: hidden;
+			}
+
+			.nav-link.active {
+				color: rgb(3, 3, 19);
+				border-bottom-color: blue;
+			}
+
+			.sign-in {
+				padding: 10px;
+			}
+			.sign-in:hover {
+				background-color: #e8e9eb;
+				padding: 10px;
+			}
 		</style>
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body>
-		<div class="container mx-auto">
+	<body class="bg-gray-100">
+		<!-- header -->
+		<div class="container mx-auto rounded-lg">
 			<nav
-				class="flex items-center justify-between max-w-xl p-4 mx-auto bg-white shadow mt-9"
+				class="flex items-center justify-between max-w-3xl p-4 mx-auto bg-white rounded-lg shadow-lg mt-9"
 			>
 				<div class="flex items-center space-x-4">
-					<span class="text-xl font-semibold">Roadmap</span>
-					<span class="text-sm text-gray-500">Powered by Rowy</span>
+					<span class="text-xl font-semibold"
+						>Roadmap <br />
+						<p class="text-sm text-gray-500">Powered by Rowy</p></span
+					>
 				</div>
 				<div class="flex items-center space-x-4">
 					<button class="focus:outline-none">
@@ -80,146 +106,50 @@
 								d="M48 48L17 24l-4-3 35-10z"
 							></path>
 						</svg>
-						<span>SIGN IN WITH GOOGLE</span>
+						<span class="text-black sign-in"> SIGN IN WITH GOOGLE</span>
 					</button>
 				</div>
 			</nav>
 		</div>
 
-		<!-- block-1 -->
-		<div class="flex items-center justify-center mt-10">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
-				<div class="flex items-center justify-between mb-2">
-					<div class="flex flex-col items-center mr-2">
-						<ul>
-							<li class="mb-4">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="w-6 h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-									></path>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-									></path>
-								</svg>
-							</li>
-							<li class="mb-4">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="w-6 h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M5 15l7-7 7 7"
-									></path>
-								</svg>
-							</li>
-							<li class="mb-4">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="w-6 h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M19 9l-7 7-7-7"
-									></path>
-								</svg>
-							</li>
-						</ul>
-					</div>
-					<div class="vertical-divider"></div>
-					<div class="flex-grow">
-						<div class="flex items-center justify-between mb-2">
-							<div class="flex items-center">
-								<span
-									class="px-4 py-1 text-sm text-white rounded-lg select-none bg-info"
-								>
-									In Progress
-								</span>
-							</div>
-							<h2 class="font-bold text-gray-900">
-								Multiple field sorting `1`
-							</h2>
-						</div>
-						<div class="text-sm text-gray-500 table-info">
-							Allow for sorting to be done over multiple fields on a table.
-						</div>
-						<div class="flex items-center mt-2">
-							<span class="text-sm text-gray-500">Target Release:</span>
-							<span
-								class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-								>June 2024</span
-							>
-						</div>
-					</div>
-					<div class="vertical-divider"></div>
-					<div class="flex flex-col items-center ml-2">
-						<ul>
-							<li class="mb-4">
-								<span class="text-gray-400">+509</span>
-							</li>
-							<li class="mb-4">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="w-6 h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-									></path>
-								</svg>
-							</li>
-							<li class="mb-4">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="w-6 h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-									></path>
-								</svg>
-							</li>
-						</ul>
-					</div>
+		<!-- navigation -->
+		<div
+			class="container max-w-3xl p-4 mx-auto mt-3 bg-white rounded-t-lg shadow"
+		>
+			<div class="flex justify-between">
+				<ul class="flex space-x-4">
+					<li>
+						<a href="#all" class="nav-link active">All</a>
+					</li>
+					<li>
+						<a href="#need-feedback" class="nav-link">Need feedback</a>
+					</li>
+					<li>
+						<a href="#next" class="nav-link">Next</a>
+					</li>
+					<li>
+						<a href="#in-progress" class="nav-link">In Progress</a>
+					</li>
+					<li>
+						<a href="#complete" class="nav-link">Complete</a>
+					</li>
+				</ul>
+				<div>
+					<ul class="flex space-x-4">
+						<li>
+							<a href="#most-voted" class="nav-link active">Most Voted</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<!-- block-2 -->
+		<!-- block-1 -->
 		<div class="flex items-center justify-center">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
+			<div
+				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
+			>
 				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2 border-r-2">
+					<ul class="mr-2">
 						<li class="mb-4">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -275,22 +205,27 @@
 						</li>
 					</ul>
 					<div
-						class="flex items-center px-4 py-1 -mt-8 -ml-5 text-sm text-white rounded-lg select-none mb-14 bg-info"
+						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<div
+						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
 					>
 						<span>In Progress</span>
 					</div>
 
-					<div class="mr-4 -mt-24">
-						<h2 class="text-gray-900 mr-28">
+					<div class="mb-8">
+						<h2 class="text-gray-900">
 							<b>Multiple field sorting `1`</b>
 						</h2>
-					</div>
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 table-info">
+						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
 							Allow for sorting to be done over multiple fields on a table.
-						</span>
+						</h3>
+						<div class="mb-8"></div>
 					</div>
-					<ul class="border-l-2">
+					<div
+						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<ul class="">
 						<li class="mb-4">
 							<span class="text-gray-400">+509</span>
 						</li>
@@ -328,7 +263,136 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex items-center ml-10 -mt-10">
+				<div class="flex items-center -mt-10 ml-28">
+					<span class="">Target Release:</span>
+					<span
+						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
+						>June 2024</span
+					>
+				</div>
+			</div>
+		</div>
+		<!-- block-2 -->
+		<div class="flex items-center justify-center">
+			<div
+				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
+			>
+				<div class="flex items-center justify-between mb-2">
+					<ul class="mr-2">
+						<li class="mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-6 h-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+								></path>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+								></path>
+							</svg>
+						</li>
+						<li class="mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-6 h-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M5 15l7-7 7 7"
+								></path>
+							</svg>
+						</li>
+						<li class="mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-6 h-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M19 9l-7 7-7-7"
+								></path>
+							</svg>
+						</li>
+					</ul>
+					<div
+						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<div
+						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
+					>
+						<span>In Progress</span>
+					</div>
+
+					<div class="mb-8">
+						<h2 class="text-gray-900">
+							<b>Multiple field sorting `1`</b>
+						</h2>
+						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
+							Allow for sorting to be done over multiple fields on a table.
+						</h3>
+						<div class="mb-8"></div>
+					</div>
+					<div
+						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<ul class="">
+						<li class="mb-4">
+							<span class="text-gray-400">+509</span>
+						</li>
+						<li class="mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-6 h-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+								></path>
+							</svg>
+						</li>
+						<li class="mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-6 h-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+								></path>
+							</svg>
+						</li>
+					</ul>
+				</div>
+				<div class="flex items-center -mt-10 ml-28">
 					<span class="">Target Release:</span>
 					<span
 						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
@@ -339,9 +403,11 @@
 		</div>
 		<!-- block-3 -->
 		<div class="flex items-center justify-center">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
+			<div
+				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
+			>
 				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2 border-r-2">
+					<ul class="mr-2">
 						<li class="mb-4">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -397,22 +463,27 @@
 						</li>
 					</ul>
 					<div
-						class="flex items-center px-4 py-1 -mt-8 -ml-5 text-sm text-white rounded-lg select-none mb-14 bg-info"
+						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<div
+						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
 					>
 						<span>In Progress</span>
 					</div>
 
-					<div class="mr-4 -mt-24">
-						<h2 class="text-gray-900 mr-28">
+					<div class="mb-8">
+						<h2 class="text-gray-900">
 							<b>Multiple field sorting `1`</b>
 						</h2>
-					</div>
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 table-info">
+						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
 							Allow for sorting to be done over multiple fields on a table.
-						</span>
+						</h3>
+						<div class="mb-8"></div>
 					</div>
-					<ul class="border-l-2">
+					<div
+						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<ul class="">
 						<li class="mb-4">
 							<span class="text-gray-400">+509</span>
 						</li>
@@ -450,7 +521,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex items-center ml-10 -mt-10">
+				<div class="flex items-center -mt-10 ml-28">
 					<span class="">Target Release:</span>
 					<span
 						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
@@ -461,9 +532,11 @@
 		</div>
 		<!-- block-4 -->
 		<div class="flex items-center justify-center">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
+			<div
+				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
+			>
 				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2 border-r-2">
+					<ul class="mr-2">
 						<li class="mb-4">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -519,22 +592,27 @@
 						</li>
 					</ul>
 					<div
-						class="flex items-center px-4 py-1 -mt-8 -ml-5 text-sm text-white rounded-lg select-none mb-14 bg-info"
+						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<div
+						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
 					>
 						<span>In Progress</span>
 					</div>
 
-					<div class="mr-4 -mt-24">
-						<h2 class="text-gray-900 mr-28">
+					<div class="mb-8">
+						<h2 class="text-gray-900">
 							<b>Multiple field sorting `1`</b>
 						</h2>
-					</div>
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 table-info">
+						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
 							Allow for sorting to be done over multiple fields on a table.
-						</span>
+						</h3>
+						<div class="mb-8"></div>
 					</div>
-					<ul class="border-l-2">
+					<div
+						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<ul class="">
 						<li class="mb-4">
 							<span class="text-gray-400">+509</span>
 						</li>
@@ -572,7 +650,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex items-center ml-10 -mt-10">
+				<div class="flex items-center -mt-10 ml-28">
 					<span class="">Target Release:</span>
 					<span
 						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
@@ -583,9 +661,11 @@
 		</div>
 		<!-- block-5 -->
 		<div class="flex items-center justify-center">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
+			<div
+				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
+			>
 				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2 border-r-2">
+					<ul class="mr-2">
 						<li class="mb-4">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -641,144 +721,27 @@
 						</li>
 					</ul>
 					<div
-						class="flex items-center px-4 py-1 -mt-8 -ml-5 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
-
-					<div class="mr-4 -mt-24">
-						<h2 class="text-gray-900 mr-28">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-					</div>
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 table-info">
-							Allow for sorting to be done over multiple fields on a table.
-						</span>
-					</div>
-					<ul class="border-l-2">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
-				</div>
-				<div class="flex items-center ml-10 -mt-10">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
-				</div>
-			</div>
-		</div>
-		<!-- block-6 -->
-		<div class="flex items-center justify-center">
-			<div class="w-full max-w-xl p-4 bg-white border-t-2 border-b-2 shadow-md">
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2 border-r-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
+						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
 					<div
-						class="flex items-center px-4 py-1 -mt-8 -ml-5 text-sm text-white rounded-lg select-none mb-14 bg-info"
+						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
 					>
 						<span>In Progress</span>
 					</div>
 
-					<div class="mr-4 -mt-24">
-						<h2 class="text-gray-900 mr-28">
+					<div class="mb-8">
+						<h2 class="text-gray-900">
 							<b>Multiple field sorting `1`</b>
 						</h2>
-					</div>
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 table-info">
+						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
 							Allow for sorting to be done over multiple fields on a table.
-						</span>
+						</h3>
+						<div class="mb-8"></div>
 					</div>
-					<ul class="border-l-2">
+					<div
+						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					></div>
+					<ul class="">
 						<li class="mb-4">
 							<span class="text-gray-400">+509</span>
 						</li>
@@ -816,7 +779,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex items-center ml-10 -mt-10">
+				<div class="flex items-center -mt-10 ml-28">
 					<span class="">Target Release:</span>
 					<span
 						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"

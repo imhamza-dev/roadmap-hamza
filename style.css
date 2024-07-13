@@ -8,6 +8,9 @@
 }
 
 .table-info {
-	margin-left: -445px;
 	font-size: 5px;
+}
+
+.box:hover {
+	background-color: #f2f2f2;
 }

@@ -108,3 +108,141 @@
 		<script></script>
 	</body>
 </html>
+
+<!-- ----------------------------- -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Romantic Story: Boy and Girl</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f0f0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+			}
+			.container {
+				position: relative;
+				width: 600px;
+				height: 400px;
+				background-color: #fff;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.boy {
+				position: absolute;
+				top: 40px;
+				left: 50px;
+				width: 100px;
+				height: 200px;
+				background-color: #4682b4;
+				border-radius: 50px 50px 0 0;
+				z-index: 2;
+				animation: sway 3s ease-in-out infinite alternate;
+			}
+			.girl {
+				position: absolute;
+				top: 60px;
+				right: 50px;
+				width: 100px;
+				height: 200px;
+				background-color: #ffb6c1;
+				border-radius: 50px 50px 0 0;
+				z-index: 1;
+				animation: sway 3s ease-in-out infinite alternate-reverse;
+			}
+			.messages {
+				position: absolute;
+				bottom: 20px;
+				text-align: center;
+			}
+			.message {
+				display: none;
+			}
+			button {
+				margin: 5px;
+				padding: 8px 16px;
+				background-color: #4682b4;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				outline: none;
+				transition: background-color 0.3s ease;
+			}
+			button:hover {
+				background-color: #336699;
+			}
+			@keyframes sway {
+				0% {
+					transform: translateY(0);
+				}
+				100% {
+					transform: translateY(-10px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="boy"></div>
+			<div class="girl"></div>
+			<div class="messages">
+				<div class="message-boy message">
+					You make my world brighter every day.
+				</div>
+				<div class="message-boy message">
+					Life is beautiful with you by my side.
+				</div>
+				<div class="message-boy message">
+					You are my sunshine on a rainy day.
+				</div>
+				<div class="message-girl message">
+					I cherish every moment spent with you.
+				</div>
+				<div class="message-girl message">
+					You bring joy and love into my life.
+				</div>
+				<div class="message-girl message">
+					Loving you is the best decision I ever made.
+				</div>
+			</div>
+			<div>
+				<button id="btnBoy">Boy's Messages</button>
+				<button id="btnGirl">Girl's Messages</button>
+			</div>
+		</div>
+
+		<script>
+			const messagesBoy = document.querySelectorAll('.message-boy');
+			const messagesGirl = document.querySelectorAll('.message-girl');
+			const btnBoy = document.getElementById('btnBoy');
+			const btnGirl = document.getElementById('btnGirl');
+			let currentBoyMessage = 0;
+			let currentGirlMessage = 0;
+
+			btnBoy.addEventListener('click', () => {
+				messagesGirl.forEach((message) => (message.style.display = 'none'));
+				messagesBoy[currentBoyMessage].style.display = 'block';
+				currentBoyMessage = (currentBoyMessage + 1) % messagesBoy.length;
+			});
+
+			btnGirl.addEventListener('click', () => {
+				messagesBoy.forEach((message) => (message.style.display = 'none'));
+				messagesGirl[currentGirlMessage].style.display = 'block';
+				currentGirlMessage = (currentGirlMessage + 1) % messagesGirl.length;
+			});
+		</script>
+	</body>
+</html> -->
