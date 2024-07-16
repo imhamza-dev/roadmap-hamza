@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
 		<link rel="stylesheet" href="style.css" />
@@ -10,6 +9,7 @@
 			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
 			rel="stylesheet"
 		/>
+
 		<style>
 			.vertical-divider {
 				width: 1px;
@@ -40,11 +40,63 @@
 				padding: 10px;
 			}
 		</style>
-		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body class="bg-gray-100">
+		<!-- submit-form -->
+		<div
+			class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300"
+		>
+			<div
+				class="p-8 transition-transform transform bg-white rounded-lg shadow-lg w-80 hover:-translate-y-1"
+			>
+				<form id="statusForm">
+					<div class="mb-5">
+						<label for="status" class="block mb-2 font-bold text-gray-700"
+							>Status</label
+						>
+						<input
+							type="text"
+							id="status"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter status"
+						/>
+					</div>
+					<div class="mb-5">
+						<label for="title" class="block mb-2 font-bold text-gray-700"
+							>Title</label
+						>
+						<input
+							type="text"
+							id="title"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter title"
+						/>
+					</div>
+					<div class="mb-5">
+						<label for="description" class="block mb-2 font-bold text-gray-700"
+							>Description</label
+						>
+						<textarea
+							id="description"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter description"
+							rows="4"
+						></textarea>
+					</div>
+					<div>
+						<input
+							type="submit"
+							value="Submit"
+							class="w-full p-3 text-white transition-colors bg-blue-500 rounded cursor-pointer hover:bg-blue-700"
+						/>
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<!-- header -->
-		<div class="container mx-auto rounded-lg">
+
+		<div class="mx-auto rounded-lg hiddencontainer">
 			<nav
 				class="flex items-center justify-between max-w-3xl p-4 mx-auto bg-white rounded-lg shadow-lg mt-9"
 			>
@@ -143,650 +195,161 @@
 				</div>
 			</div>
 		</div>
-		<!-- block-1 -->
-		<div class="flex items-center justify-center">
-			<div
-				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
-			>
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
-					<div
-						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<div
-						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
 
-					<div class="mb-8">
-						<h2 class="text-gray-900">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
-							Allow for sorting to be done over multiple fields on a table.
-						</h3>
-						<div class="mb-8"></div>
-					</div>
-					<div
-						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<ul class="">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
+		<!-- Content display section -->
+		<div
+			id="contentDisplay"
+			class="container hidden max-w-3xl p-4 mx-auto mt-1 bg-white rounded-t-lg shadow"
+		>
+			<div class="flex items-center justify-between">
+				<ul class="mr-2">
+					<li class="mb-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+							></path>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+							></path>
+						</svg>
+					</li>
+					<li class="mb-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M5 15l7-7 7 7"
+							></path>
+						</svg>
+					</li>
+					<li class="mb-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M19 9l-7 7-7-7"
+							></path>
+						</svg>
+					</li>
+				</ul>
+				<div
+					class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+				></div>
+				<div
+					class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
+				>
+					<span id="displayStatus">In Progress</span>
 				</div>
-				<div class="flex items-center -mt-10 ml-28">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
+
+				<div class="mb-8">
+					<h2 class="text-gray-900" id="displayTitle"></h2>
+					<h3
+						class="-ml-40 text-sm text-gray-500 table-info mr-36"
+						id="displayDescription"
+					></h3>
+					<div class="mb-8"></div>
 				</div>
+				<div
+					class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+				></div>
+				<ul class="">
+					<li class="mb-4">
+						<span class="text-gray-400">+509</span>
+					</li>
+					<li class="mb-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+							></path>
+						</svg>
+					</li>
+					<li class="mb-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+							></path>
+						</svg>
+					</li>
+				</ul>
+				<div
+					class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+				></div>
+			</div>
+			<div class="flex items-center -mt-10 ml-28">
+				<span class="">Target Release:</span>
+				<span
+					class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
+					>June 2024</span
+				>
 			</div>
 		</div>
-		<!-- block-2 -->
-		<div class="flex items-center justify-center">
-			<div
-				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
-			>
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
-					<div
-						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<div
-						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
 
-					<div class="mb-8">
-						<h2 class="text-gray-900">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
-							Allow for sorting to be done over multiple fields on a table.
-						</h3>
-						<div class="mb-8"></div>
-					</div>
-					<div
-						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<ul class="">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
-				</div>
-				<div class="flex items-center -mt-10 ml-28">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
-				</div>
-			</div>
-		</div>
-		<!-- block-3 -->
-		<div class="flex items-center justify-center">
-			<div
-				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
-			>
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
-					<div
-						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<div
-						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
+		<!-- script -->
+		<script>
+			document
+				.getElementById('statusForm')
+				.addEventListener('submit', function (event) {
+					event.preventDefault();
 
-					<div class="mb-8">
-						<h2 class="text-gray-900">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
-							Allow for sorting to be done over multiple fields on a table.
-						</h3>
-						<div class="mb-8"></div>
-					</div>
-					<div
-						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<ul class="">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
-				</div>
-				<div class="flex items-center -mt-10 ml-28">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
-				</div>
-			</div>
-		</div>
-		<!-- block-4 -->
-		<div class="flex items-center justify-center">
-			<div
-				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
-			>
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
-					<div
-						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<div
-						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
+					// Get the form values
+					const status = document.getElementById('status').value;
+					const title = document.getElementById('title').value;
+					const description = document.getElementById('description').value;
 
-					<div class="mb-8">
-						<h2 class="text-gray-900">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
-							Allow for sorting to be done over multiple fields on a table.
-						</h3>
-						<div class="mb-8"></div>
-					</div>
-					<div
-						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<ul class="">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
-				</div>
-				<div class="flex items-center -mt-10 ml-28">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
-				</div>
-			</div>
-		</div>
-		<!-- block-5 -->
-		<div class="flex items-center justify-center">
-			<div
-				class="w-full max-w-3xl p-4 bg-white border-t-2 border-b-2 shadow-md box"
-			>
-				<div class="flex items-center justify-between mb-2">
-					<ul class="mr-2">
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-								></path>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M5 15l7-7 7 7"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M19 9l-7 7-7-7"
-								></path>
-							</svg>
-						</li>
-					</ul>
-					<div
-						class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<div
-						class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
-					>
-						<span>In Progress</span>
-					</div>
+					// Display the submitted content
+					document.getElementById('displayStatus').textContent = status;
+					document.getElementById('displayTitle').textContent = title;
+					document.getElementById('displayDescription').textContent =
+						description;
 
-					<div class="mb-8">
-						<h2 class="text-gray-900">
-							<b>Multiple field sorting `1`</b>
-						</h2>
-						<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
-							Allow for sorting to be done over multiple fields on a table.
-						</h3>
-						<div class="mb-8"></div>
-					</div>
-					<div
-						class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-					></div>
-					<ul class="">
-						<li class="mb-4">
-							<span class="text-gray-400">+509</span>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-								></path>
-							</svg>
-						</li>
-						<li class="mb-4">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-								></path>
-							</svg>
-						</li>
-					</ul>
-				</div>
-				<div class="flex items-center -mt-10 ml-28">
-					<span class="">Target Release:</span>
-					<span
-						class="bg-gray-200 text-gray-900 text-sm font-medium ml-2 px-2.5 py-0.5 rounded"
-						>June 2024</span
-					>
-				</div>
-			</div>
-		</div>
+					// Hide the form and show
+
+					// document.getElementById('statusForm').style.display = 'none';
+					document.getElementById('contentDisplay').classList.remove('hidden');
+				});
+		</script>
 	</body>
 </html>
