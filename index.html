@@ -21,7 +21,14 @@
 				transition: color 0.3s, border-bottom 0.3s;
 				padding: 10px;
 			}
+
 			.nav-link:hover {
+				background-color: #e8e9eb;
+				padding: 10px;
+				overflow: hidden;
+			}
+
+			.hov-effect {
 				background-color: #e8e9eb;
 				padding: 10px;
 				overflow: hidden;
@@ -120,7 +127,7 @@
 					</button>
 					<button class="focus:outline-none"></button>
 					<button
-						class="flex items-center space-x-1 text-blue-500 focus:outline-none"
+						class="flex items-center space-x-1 text-blue-500 focus:outline-none hov-effect"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -258,7 +265,7 @@
 					</li>
 				</ul>
 				<div
-					class="h-[118px] min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
+					class="h-[118px] min-h-[1em] w-0.5 self-stretch -ml-24 bg-black"
 				></div>
 				<div
 					class="flex items-center px-4 py-1 -mt-8 text-sm text-white rounded-lg select-none mb-14 bg-info"
@@ -274,6 +281,10 @@
 					></h3>
 					<div class="mb-8"></div>
 				</div>
+
+				<div
+					class="h-[118px] min-h-[1em] w-0.5 self-stretch bg-black -mr-24"
+				></div>
 
 				<ul class="">
 					<li class="mb-4">
@@ -312,8 +323,8 @@
 						</svg>
 					</li>
 				</ul>
+
 				<!-- divider -->
-				<div class="h-[118px] min-h-[1em] w-0.5 self-stretch bg-black"></div>
 			</div>
 			<div class="flex items-center -mt-10 ml-28">
 				<span class="">Target Release:</span>
@@ -322,9 +333,6 @@
 					>June 2024</span
 				>
 			</div>
-			<div
-				class="h-[118px] min-h-[1em] -ml-3 -mr-5 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
-			></div>
 		</div>
 
 		<!-- script -->
