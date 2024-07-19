@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			.vertical-divider {
+				width: 1px;
+				background-color: #0e52e6;
+				margin: 0 1rem;
+			}
+			.nav-link {
+				border-bottom: 2px solid transparent;
+				transition: color 0.3s, border-bottom 0.3s;
+				padding: 10px;
+			}
+			.nav-link:hover {
+				background-color: #e8e9eb;
+			}
+			.nav-link.active {
+				color: rgb(3, 3, 19);
+				border-bottom-color: blue;
+			}
+			.sign-in {
+				padding: 10px;
+			}
+			.sign-in:hover {
+				background-color: #e8e9eb;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-100">
+		<div
+			class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300"
+		>
+			<div class="p-8 bg-white rounded-lg shadow-lg w-80">
+				<form id="statusForm">
+					<div class="mb-5">
+						<label for="status" class="block mb-2 font-bold text-gray-700"
+							>Status</label
+						>
+						<input
+							type="text"
+							id="status"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter status"
+						/>
+					</div>
+					<div class="mb-5">
+						<label for="title" class="block mb-2 font-bold text-gray-700"
+							>Title</label
+						>
+						<input
+							type="text"
+							id="title"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter title"
+						/>
+					</div>
+					<div class="mb-5">
+						<label for="description" class="block mb-2 font-bold text-gray-700"
+							>Description</label
+						>
+						<textarea
+							id="description"
+							class="w-full p-3 border border-gray-300 rounded outline-none focus:border-blue-500"
+							placeholder="Enter description"
+							rows="4"
+						></textarea>
+					</div>
+					<div>
+						<input
+							type="submit"
+							value="Submit"
+							class="w-full p-3 text-white bg-blue-500 rounded cursor-pointer hover:bg-blue-700"
+						/>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="mx-auto rounded-lg hiddencontainer">
+			<nav
+				class="flex items-center justify-between max-w-3xl p-4 mx-auto bg-white rounded-lg shadow-lg mt-9"
+			>
+				<div class="flex items-center space-x-4">
+					<span class="text-xl font-semibold"
+						>Roadmap <br />
+						<p class="text-sm text-gray-500">Powered by Rowy</p></span
+					>
+				</div>
+				<div class="flex items-center space-x-4">
+					<button class="focus:outline-none"></button>
+					<button
+						class="flex items-center space-x-1 text-blue-500 focus:outline-none"
+					>
+						<span class="text-black sign-in"> SIGN IN WITH GOOGLE</span>
+					</button>
+				</div>
+			</nav>
+		</div>
+
+		<div
+			class="container max-w-3xl p-4 mx-auto mt-3 bg-white rounded-t-lg shadow"
+		>
+			<div class="flex justify-between">
+				<ul class="flex space-x-4">
+					<li><a href="#all" class="nav-link active">All</a></li>
+					<li><a href="#need-feedback" class="nav-link">Need feedback</a></li>
+					<li><a href="#next" class="nav-link">Next</a></li>
+					<li><a href="#in-progress" class="nav-link">In Progress</a></li>
+					<li><a href="#complete" class="nav-link">Complete</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- <div
+			id="contentDisplay"
+			class="container hidden max-w-3xl p-4 mx-auto mt-1 bg-white rounded-t-lg shadow"
+		>
+			<div id="submissions" class="flex flex-col"></div>
+		</div> -->
+
+		<script>
+			document
+				.getElementById('statusForm')
+				.addEventListener('submit', function (event) {
+					event.preventDefault();
+
+					const status = document.getElementById('status').value;
+					const title = document.getElementById('title').value;
+					const description = document.getElementById('description').value;
+
+					// Create a new submission section
+					const submissionDiv = document.createElement('div');
+					submissionDiv.classList.add(
+						'mb-5',
+						'p-4',
+						'border',
+						'rounded',
+						'shadow'
+					);
+
+					submissionDiv.innerHTML = `
+                <h2 class="text-gray-900">${title}</h2>
+                <p class="text-gray-500">${description}</p>
+                <span class="bg-gray-200 text-gray-900 text-sm font-medium px-2.5 py-0.5 rounded">${status}</span>
+            `;
+
+					// Append to submissions container
+					document.getElementById('submissions').appendChild(submissionDiv);
+
+					// Clear the input fields
+					document.getElementById('status').value = '';
+					document.getElementById('title').value = '';
+					document.getElementById('description').value = '';
+
+					// Show the submissions section
+					document.getElementById('contentDisplay').classList.remove('hidden');
+				});
+		</script>
+	</body>
+</html>
