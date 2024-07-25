@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				background-color: #f1f1f1;
+			}
+
+			nav ul li {
+				display: inline-block;
+			}
+
+			nav ul li a {
+				display: block;
+				padding: 10px 15px;
+				text-decoration: none;
+				color: #333;
+			}
+
+			.dropdown {
+				position: relative;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			.dropdown-content a {
+				color: #333;
+				padding: 10px 15px;
+				display: block;
+				text-decoration: none;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li class="dropdown">
+					<a href="#">Posts</a>
+					<div class="dropdown-content">
+						<a href="#">Most Recent</a>
+						<a href="#">Most Voted</a>
+					</div>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

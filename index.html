@@ -11,6 +11,7 @@
 			rel="stylesheet"
 		/>
 		<style>
+		
 			.vertical-divider {
 				width: 1px;
 				background-color: #0e52e6;
@@ -46,12 +47,52 @@
 				border-bottom-color: blue;
 			}
 
+			.dropdown:hover {
+				background-color: #e8e9eb;
+				padding: 10px;
+		
+			}
+
+
 			.sign-in {
 				padding: 10px;
 			}
 			.sign-in:hover {
 				background-color: #e8e9eb;
 				padding: 10px;
+			}
+
+			
+
+			.dropdown {
+				position: relative;
+				padding: 10px;
+			
+			}
+
+			.dropdown-content {
+				display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    white-space: nowrap;
+		
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			.dropdown-content a {
+				color: #333;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #ddd;
 			}
 		</style>
 		<script src="https://cdn.tailwindcss.com"></script>
@@ -61,11 +102,11 @@
 		<div class="clear">
 			<div class="container mx-auto rounded-lg">
 				<nav
-					class="flex items-center justify-between max-w-3xl p-4 mx-auto bg-white rounded-lg shadow-lg mt-9"
+					class="flex items-center justify-between max-w-3xl p-4 mx-auto mt-4 bg-white rounded-lg shadow-lg"
 				>
 					<div class="flex items-center space-x-4">
 						<span class="text-xl font-semibold"
-							>Roadmap <br />
+							><b>Roadmap</b> <br />
 							<p class="text-sm text-gray-500">Powered by Rowy</p></span
 						>
 					</div>
@@ -134,25 +175,29 @@
 				<div class="flex justify-between">
 					<ul class="flex space-x-4">
 						<li>
-							<a href="#all" class="nav-link active">All</a>
+							<a href="#" class="nav-link active ">All</a>
 						</li>
 						<li>
-							<a href="#need-feedback" class="nav-link">Need feedback</a>
+							<a href="need-feadback.html" class="nav-link">Need feedback</a>
 						</li>
 						<li>
-							<a href="#next" class="nav-link">Next</a>
+							<a href="next.html" class="nav-link">Next</a>
 						</li>
 						<li>
-							<a href="#in-progress" class="nav-link">In Progress</a>
+							<a href="in-process.html" class="nav-link">In Progress</a>
 						</li>
 						<li>
-							<a href="#complete" class="nav-link">Complete</a>
+							<a href="complete.html" class="nav-link">Complete</a>
 						</li>
 					</ul>
 					<div>
 						<ul class="flex space-x-4">
-							<li>
-								<a href="#most-voted" class="nav-link active">Most Voted</a>
+							<li class="dropdown active">
+								<a href="#" class="border-b-2 border-blue-500 border-solid ">Most Voted</a>
+								<div class="dropdown-content">
+									<a href="#">Most Recent</a>
+									<a href="#">Most Voted</a>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -242,7 +287,7 @@
 							class="h-[140px] min-h-[1em] -ml-3 -mr-6 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<ul class="">
-							<li class="mb-4 mr-2 li-hov">
+							<li class="mb-4 mr-2 ">
 								<span class="text-gray-400">+509</span>
 							</li>
 							<li class="mb-4 li-hov">
@@ -354,16 +399,16 @@
 						min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<div
-							class="items-center px-4 py-1 -mt-8 -ml-10 text-sm text-white bg-blue-500 rounded-lg select-none mb-14"
+							class="items-center px-4 py-1 -mt-8 -ml-10 text-sm text-white bg-blue-900 rounded-lg select-none mb-14"
 						>
-							<span>In Progress</span>
+							<span> Next</span>
 						</div>
 
 						<div class="mb-8">
 							<h2 class="text-gray-900">
 								<b>Multiple field sorting `1`</b>
 							</h2>
-							<h3 class="-ml-40 text-sm text-gray-500 table-info mr-36">
+							<h3 class="-ml-32 text-sm text-gray-500 table-info mr-36">
 								Allow for sorting to be done over multiple fields on a table.
 							</h3>
 							<div class="mb-8"></div>
@@ -372,7 +417,7 @@
 							class="h-[140px] min-h-[1em] -ml-3 -mr-6 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<ul class="">
-							<li class="mb-4 mr-2 li-hov">
+							<li class="mb-4 mr-2 ">
 								<span class="text-gray-400">+509</span>
 							</li>
 							<li class="mb-4 li-hov">
@@ -502,7 +547,7 @@
 							class="h-[140px] min-h-[1em] -ml-3 -mr-6 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<ul class="">
-							<li class="mb-4 mr-2 li-hov">
+							<li class="mb-4 mr-2 ">
 								<span class="text-gray-400">+509</span>
 							</li>
 							<li class="mb-4 li-hov">
@@ -632,7 +677,7 @@
 							class="h-[140px] min-h-[1em] -ml-3 -mr-6 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<ul class="">
-							<li class="mb-4 mr-2 li-hov">
+							<li class="mb-4 mr-2 ">
 								<span class="text-gray-400">+509</span>
 							</li>
 							<li class="mb-4 li-hov">
@@ -744,9 +789,9 @@
 						min-h-[1em] -ml-7 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<div
-							class="items-center px-4 py-1 -mt-8 -ml-10 text-sm text-white rounded-lg select-none mb-14 bg-info"
+							class="items-center px-4 py-1 -mt-8 -ml-10 text-sm text-white bg-green-500 rounded-lg select-none mb-14"
 						>
-							<span>In Progress</span>
+							<span>In Complete</span>
 						</div>
 
 						<div class="mb-8">
@@ -762,7 +807,7 @@
 							class="h-[140px] min-h-[1em] -ml-3 -mr-6 mb-5 w-0.5 self-stretch bg-neutral-300 dark:bg-white/200"
 						></div>
 						<ul class="">
-							<li class="mb-4 mr-2 li-hov">
+							<li class="mb-4 mr-2 ">
 								<span class="text-gray-400">+509</span>
 							</li>
 							<li class="mb-4 li-hov">
